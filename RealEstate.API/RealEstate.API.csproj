@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Helpers\SecretsStructure.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Helpers\SecretsStructure.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RealEstate.Application\RealEstate.Application.csproj" />
+    <ProjectReference Include="..\RealEstate.Structure\RealEstate.Structure.csproj" />
+  </ItemGroup>
+
+</Project>
